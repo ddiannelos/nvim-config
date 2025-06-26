@@ -31,7 +31,8 @@ return {
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = {"lua_ls", "pyright"},
+            -- To add new language, add the appropriate lsp here
+            ensure_installed = {"lua_ls", "pyright", "rust_analyzer"},
             handlers = {
                 function(server_name)
                     require('lspconfig')[server_name].setup { capabilities = capabilities }
