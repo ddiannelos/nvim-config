@@ -32,7 +32,7 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup({
             -- To add new language, add the appropriate lsp here
-            ensure_installed = {"lua_ls", "pyright", "rust_analyzer"},
+            ensure_installed = {"lua_ls", "pyright", "rust_analyzer", "marksman"},
             handlers = {
                 function(server_name)
                     require('lspconfig')[server_name].setup { capabilities = capabilities }
